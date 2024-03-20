@@ -82,18 +82,4 @@ public class DishController {
         return ResponseEntity.ok(result);
     }
 
-    @GetMapping("/insert")
-    public void insertDishes(){
-        List<Dish> dishes= new ArrayList<Dish>();
-        dishes.add(new Dish(null, LocalDate.now(),"Alubias",6.9));
-        dishes.add(new Dish(null,LocalDate.now(),"Macarrones",6.9));
-        dishes.add(new Dish(null,LocalDate.now(),"Sopa",6.9));
-        dishes.add(new Dish(null,LocalDate.now(),"Setas",6.9));
-        dishes.add(new Dish(null,LocalDate.now(),"Croquetas",6.9));
-        dishes.add(new Dish(null,LocalDate.now(),"Ñoquis",6.9));
-        for(Dish dish : dishes){
-            service.save(dish);
-        }
-    }
-
 }
